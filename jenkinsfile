@@ -7,7 +7,7 @@ pipeline {
         stage('git clone') {
             steps {
                 echo 'cloning repo from github'
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/swati-zampal/devops-7-nodeapp.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sakshi-4546/Nodejs-using-pipeline.git']])
                 echo "Cloned successfully..."
             }
         }
@@ -34,7 +34,7 @@ pipeline {
                        mkdir nodeapp1
                        cd nodeapp1
                     git init
-                    git pull "https://github.com/swati-zampal/devops-7-nodeapp.git" 
+                    git pull "https://github.com/Sakshi-4546/Nodejs-using-pipeline.git" 
                     sudo apt update
                    sudo apt install nodejs npm -y
                     npm install
